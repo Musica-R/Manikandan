@@ -1,0 +1,22 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d2f2c"/>
+      <stop offset="55%" stop-color="#123f3c"/>
+      <stop offset="100%" stop-color="#071e1c"/>
+    </linearGradient>
+    <linearGradient id="chromeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5f5f7"/>
+      <stop offset="35%" stop-color="#c9ccd1"/>
+      <stop offset="55%" stop-color="#8b8f96"/>
+      <stop offset="75%" stop-color="#e7e8ea"/>
+      <stop offset="100%" stop-color="#9a9ea4"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1100" fill="url(#bgGrad)"/>
+  <circle cx="450" cy="430" r="230" fill="none" stroke="url(#chromeGrad)" stroke-width="2" opacity="0.35"/>
+  <circle cx="450" cy="430" r="150" fill="none" stroke="url(#chromeGrad)" stroke-width="1.5" opacity="0.25"/>
+  <path d="M300 900 C300 680 360 560 450 560 C540 560 600 680 600 900 Z" fill="url(#chromeGrad)" opacity="0.14"/>
+  <circle cx="450" cy="430" r="120" fill="url(#chromeGrad)" opacity="0.16"/>
+  <text x="450" y="455" font-family="Georgia, serif" font-size="120" fill="url(#chromeGrad)" text-anchor="middle" opacity="0.55">M</text>
+</svg>

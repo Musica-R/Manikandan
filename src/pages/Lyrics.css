@@ -1,0 +1,206 @@
+.lyrics {
+    background: var(--bg-cream-soft);
+    padding: 2rem 0 6rem;
+}
+
+.lyrics__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-bottom: 5rem;
+}
+
+/* --- Zigzag row --- */
+.lyricsRow {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.lyricsRow:nth-child(even) {
+    direction: rtl;
+}
+
+.lyricsRow:nth-child(even)>* {
+    direction: ltr;
+}
+
+.lyricsRow__frameWrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow-soft);
+    background: var(--bg-teal-deep);
+    padding: 0;
+    cursor: pointer;
+    display: block;
+}
+
+.lyricsRow__thumb {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.lyricsRow__frameWrap:hover .lyricsRow__thumb {
+    transform: scale(1.05);
+    filter: brightness(0.85);
+}
+
+.lyricsRow__frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.lyricsRow__playBtn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-teal-deep);
+    background: rgba(250, 248, 242, 0.92);
+    box-shadow: 0 12px 28px rgba(10, 38, 36, 0.3);
+    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease;
+}
+
+.lyricsRow__frameWrap:hover .lyricsRow__playBtn {
+    transform: translate(-50%, -50%) scale(1.1);
+    background: var(--accent-teal-bright);
+    color: #fff;
+}
+
+.lyricsRow__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.lyricsRow__index {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--accent-teal);
+    opacity: 0.5;
+    line-height: 1;
+}
+
+.lyricsRow__title {
+    font-size: 1.85rem;
+}
+
+.lyricsRow__tagline {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.lyricsRow__badge {
+    align-self: flex-start;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-teal);
+    border: 1px solid var(--accent-teal);
+}
+
+/* --- Muvia Productions channel CTA --- */
+.muviaCta {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 2.2rem;
+    border-radius: var(--radius-lg);
+    background: linear-gradient(160deg, var(--bg-teal-mid) 0%, var(--bg-teal-deep) 100%);
+    box-shadow: 0 20px 50px rgba(10, 38, 36, 0.22);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.muviaCta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 26px 60px rgba(10, 38, 36, 0.3);
+}
+
+.muviaCta__icon {
+    flex-shrink: 0;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-teal-deep);
+    background: var(--bg-cream);
+}
+
+.muviaCta__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+}
+
+.muviaCta__name {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--bg-cream);
+}
+
+.muviaCta__desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: rgba(250, 248, 242, 0.75);
+}
+
+.muviaCta__arrow {
+    flex-shrink: 0;
+    color: var(--bg-cream);
+    opacity: 0.85;
+}
+
+.contain {
+    width: 100%;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 860px) {
+
+    .lyricsRow,
+    .lyricsRow:nth-child(even) {
+        grid-template-columns: 1fr;
+        direction: ltr;
+    }
+
+    .lyricsRow__frameWrap {
+        order: -1;
+    }
+
+    .muviaCta {
+        flex-wrap: wrap;
+        padding: 1.6rem;
+    }
+
+    .muviaCta__arrow {
+        display: none;
+    }
+}

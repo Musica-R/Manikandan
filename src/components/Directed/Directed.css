@@ -1,0 +1,281 @@
+.flow-section {
+  padding: 6rem 0 5rem;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.flow-section::before {
+  content: "";
+  position: absolute;
+  inset: -20px; /* extend beyond edges so the blur doesn't reveal sharp borders */
+  background: url("../../assets/pic/bg.png") center center / cover no-repeat;
+  filter: blur(1px);
+  transform: scale(1.05); /* avoid edge artifacts from the blur */
+  z-index: -1;
+}
+
+.flow-section__inner {
+  display: grid;
+  grid-template-columns: 1.15fr 0.75fr 1.15fr;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.flow-section__inner-head {
+  text-align: center;
+  max-width: 62ch;
+  margin: 0 auto 3.5rem;
+}
+
+.flow-section__title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 500;
+  margin-top: 0.6rem;
+  color: var(--ink);
+}
+
+/* ---------- Poster cards (glass) ---------- */
+
+.flow-card {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 22px;
+  padding: 1.6rem 1.6rem 1.85rem;
+  box-shadow: 0 20px 45px rgba(10, 38, 36, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.flow-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.35), transparent 40%);
+  pointer-events: none;
+}
+
+.flow-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 55px rgba(10, 38, 36, 0.12);
+}
+
+.flow-card__poster {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  background: var(--bg-cream, #f4efe3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 540px;
+}
+
+.flow-card__poster img {
+  width: 100%;
+  height: auto;
+  max-height: 540px;
+  object-fit: contain; /* full poster visible, no crop */
+  display: block;
+}
+
+.flow-card__title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-bottom: 0.6rem;
+  border-bottom: 2px solid var(--ink, #111);
+  display: inline-block;
+  position: relative;
+}
+
+.flow-card__tagline {
+  margin: 0.9rem 0 1.4rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ink-faint, #666);
+  max-width: 32ch;
+  position: relative;
+}
+
+.flow-card__roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+
+.flow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--line, #e2e2e2);
+  border-radius: 999px;
+  color: var(--ink, #222);
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.flow-card__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.9rem 1.3rem;
+  border: 1px solid var(--ink, #111);
+  border-radius: 10px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--ink, #111);
+  transition: background 0.2s ease, color 0.2s ease;
+  position: relative;
+  width: fit-content;
+}
+
+.flow-card__cta:hover {
+  background: var(--ink, #111);
+  color: #fff;
+}
+
+.flow-card--right {
+  text-align: left;
+}
+
+/* ---------- Center pen + ribbons ---------- */
+
+.flow-center {
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  overflow: visible;
+}
+
+.flow-center__pen-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 340px; /* controls the pen's footprint so it stays centered in its track */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-center__pen {
+  width: 130%;
+  max-width: none;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transform: translateY(-140px);
+  transition: transform 5.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 1.6s ease;
+  will-change: transform, opacity;
+}
+
+@media (max-width: 960px) {
+  .flow-center__pen-wrap {
+    max-width: 220px;
+  }
+
+  .flow-center__pen {
+    width: 100%;
+  }
+}
+
+/* ---------- Text: fade up, one after another ---------- */
+
+.flow-section__inner-head .eyebrow,
+.flow-section__title,
+.flow-card__title,
+.flow-card__tagline,
+.flow-card__roles,
+.flow-card__cta {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: transform 0.9s ease, opacity 0.9s ease;
+  will-change: transform, opacity;
+}
+
+/* header */
+.flow-section.in-view .flow-section__inner-head .eyebrow { transition-delay: 0.1s; }
+.flow-section.in-view .flow-section__title { transition-delay: 0.3s; }
+
+/* left card */
+.flow-section.in-view .flow-card--left .flow-card__title   { transition-delay: 0.5s; }
+.flow-section.in-view .flow-card--left .flow-card__tagline { transition-delay: 0.7s; }
+.flow-section.in-view .flow-card--left .flow-card__roles   { transition-delay: 0.9s; }
+.flow-section.in-view .flow-card--left .flow-card__cta     { transition-delay: 1.1s; }
+
+/* pen (starts after left card begins, finishes slow and last) */
+.flow-section.in-view .flow-center__pen { transition-delay: 0.6s; }
+
+/* right card */
+.flow-section.in-view .flow-card--right .flow-card__title   { transition-delay: 0.8s; }
+.flow-section.in-view .flow-card--right .flow-card__tagline { transition-delay: 1.0s; }
+.flow-section.in-view .flow-card--right .flow-card__roles   { transition-delay: 1.2s; }
+.flow-section.in-view .flow-card--right .flow-card__cta     { transition-delay: 1.4s; }
+
+.flow-section.in-view .eyebrow,
+.flow-section.in-view .flow-section__title,
+.flow-section.in-view .flow-card__title,
+.flow-section.in-view .flow-card__tagline,
+.flow-section.in-view .flow-card__roles,
+.flow-section.in-view .flow-card__cta,
+.flow-section.in-view .flow-center__pen {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-center__pen,
+  .flow-section__inner-head .eyebrow,
+  .flow-section__title,
+  .flow-card__title,
+  .flow-card__tagline,
+  .flow-card__roles,
+  .flow-card__cta {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 960px) {
+  .flow-section__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .flow-card__tagline {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .flow-card__cta {
+    margin: 0 auto;
+  }
+
+  .flow-center {
+    order: -1;
+    min-height: 180px;
+  }
+
+  .flow-ribbon {
+    font-size: 0.72rem;
+    padding: 0.45rem 0.8rem;
+  }
+}

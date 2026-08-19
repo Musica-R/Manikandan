@@ -1,0 +1,129 @@
+
+:root {
+  --bg-cream: #faf8f2;
+  --bg-cream-soft: #f4f1e9;
+  --bg-teal: #e7f4f1;
+  --bg-teal-deep: #0a2624;
+  --bg-teal-mid: #123f3c;
+
+  --ink: #0e211e;
+  --ink-soft: rgba(14, 33, 30, 0.66);
+  --ink-faint: rgba(14, 33, 30, 0.42);
+
+  --chrome-1: #ffffff;
+  --chrome-2: #eceef1;
+  --chrome-3: #cfd3d8;
+  --chrome-4: #a9adb4;
+  --chrome-5: #7d8188;
+
+  --line: rgba(14, 33, 30, 0.12);
+  --line-soft: rgba(14, 33, 30, 0.07);
+
+  --accent-teal: #14746b;
+  --accent-teal-bright: #1c9c8f;
+
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 28px;
+
+  --shadow-soft: 0 20px 60px rgba(10, 38, 36, 0.08);
+  --shadow-chrome: 0 1px 0 rgba(255, 255, 255, 0.6) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.06) inset, 0 12px 30px rgba(10, 38, 36, 0.14);
+
+  --font-display: "Fraunces", "Georgia", serif;
+  --font-body: "Manrope", "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-cream);
+  color: var(--ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  font-family: var(--font-body);
+}
+
+.container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+  font-weight: 700;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 1px;
+  background: var(--accent-teal);
+}
+
+/* focus visibility, respected across the site */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent-teal-bright);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+}
