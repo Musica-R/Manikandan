@@ -781,6 +781,110 @@
   transform: translateY(0);
 }
 
+.hobbies__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.5rem;
+  align-items: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hobbies__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hobbies__media {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.hobbies__media img {
+  width: 100%;
+  height: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- HOBBIES & INTERESTS ---------- */
+.hobbies {
+  background: var(--bg-cream-soft);
+  padding: 5rem 0;
+}
+
+.hobbies__header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 2.8rem;
+}
+
+.hobbies__header h2 {
+  font-size: 2rem;
+  margin: 0.6rem 0 0.5rem;
+}
+
+.hobbies__subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--accent-teal-bright);
+  font-size: 1.05rem;
+}
+
+.hobbies__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.hobbies__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--chrome-1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.4rem;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobbies__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 22px 4px var(--accent-teal-bright, rgba(45, 212, 191, 0.25));
+}
+
+.hobbies__icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--bg-teal);
+  color: var(--accent-teal);
+  font-size: 1.05rem;
+}
+
+.hobbies__item p {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* last item (with author credit) spans full width so the longer line breathes */
+.hobbies__item:last-child {
+  grid-column: 1 / -1;
+}
+
+
+
 @media (prefers-reduced-motion: reduce) {
   .reveal {
     opacity: 1;
@@ -880,5 +984,13 @@
     flex-direction: column;
     align-items: center;
     gap: 2rem;
+  }
+
+   .hobbies__list {
+    grid-template-columns: 1fr;
+  }
+
+  .hobbies__grid{
+    grid-template-columns: 1fr;
   }
 }

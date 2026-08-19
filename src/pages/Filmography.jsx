@@ -20,6 +20,7 @@ import {
 import { getYoutubeThumb } from "../utils/youtu";
 import "./Filmography.css";
 import GetInTouch from "../components/GetInTouch/GetInTouch";
+import selvarajVideo from "../assets/images/new.mp4";
 
 // Fall back to empty arrays so the page still renders (rows just won't
 // show) if any of these aren't exported from data/content.js yet.
@@ -28,6 +29,8 @@ const safeActedFeatureFilms = actedFeatureFilms || [];
 const safeWebSeries = webSeries || [];
 const safeMuviaProductions = muviaProductions || [];
 const safeThediPadippom = thediPadippom || [];
+
+
 
 // Channel links used for the "Watch on YouTube channel" button in each
 // row header. Move these into data/content.js and export them from there
@@ -205,11 +208,7 @@ function DirectedCard({ title, type, tagline, youtube, index }) {
   );
 }
 
-/* ------------------------------------------------------------------ */
-/*  FeatureCard — tile for feature films acted in. Image now comes      */
-/*  straight from the YouTube thumbnail (via the film's `youtube` URL)  */
-/*  instead of a local /assets poster, same as DirectedCard.            */
-/* ------------------------------------------------------------------ */
+
 function FeatureCard({ title, role, youtube, index }) {
   const card = (
     <div className="flix-card flix-card--feature" style={{ "--i": index }}>
@@ -238,10 +237,51 @@ function FeatureCard({ title, role, youtube, index }) {
   );
 }
 
+function OngoingCard({ title, tagline, video, onClick, index }) {
+  return (
+    <div
+      className="flix-card flix-card--video"
+      style={{ "--i": index }}
+      onClick={onClick}
+      role="button"
+      tabIndex={0}
+    >
+      <div className="flix-card__thumb">
+        <video src={video} muted playsInline preload="metadata" />
+        <span className="flix-card__play">
+          <FaPlay />
+        </span>
+        <div className="flix-card__gradient" />
+        <div className="flix-card__overlay">
+          <h3>{title}</h3>
+          <span className="flix-card__badge">Ongoing Project</span>
+          {tagline && <p>{tagline}</p>}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function VideoModal({ video, onClose }) {
+  return (
+    <div className="flix-modal" onClick={onClose}>
+      <div className="flix-modal__inner" onClick={(e) => e.stopPropagation()}>
+        <button className="flix-modal__close" onClick={onClose}>
+          ×
+        </button>
+        <video src={video} controls autoPlay />
+      </div>
+    </div>
+  );
+}
+
 /* ------------------------------------------------------------------ */
 /*  Page                                                                */
 /* ------------------------------------------------------------------ */
 export default function Filmography() {
+
+  const [showSelvarajModal, setShowSelvarajModal] = useState(false);
+
   return (
     <>
       <PageHero
@@ -417,6 +457,30 @@ export default function Filmography() {
           </ul>
         </div>
       </section>
+
+      <section className="flix">
+        <div className="con flix-rows" style={{ cursor: "pointer" }}>
+          <Row
+            title="Ongoing Project"
+            icon={FaFilm}
+            cardMin={230}
+            cardMinMobile={150}
+          >
+            <OngoingCard
+              title="Selvaraj Ennum Naan"
+              video={selvarajVideo}
+              onClick={() => setShowSelvarajModal(true)}
+              index={0}
+            />
+          </Row>
+        </div>
+      </section>
+      {showSelvarajModal && (
+        <VideoModal
+          video={selvarajVideo}
+          onClose={() => setShowSelvarajModal(false)}
+        />
+      )}
 
       <GetInTouch />
     </>

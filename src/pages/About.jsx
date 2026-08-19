@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+
 import {
   PiPenNibBold,
   PiVideoCameraBold,
@@ -16,14 +17,16 @@ import {
   PiQuotesFill,
   PiPhoneCallBold,
   PiSparkleBold,
+  PiBookOpenTextBold,
 } from "react-icons/pi";
+
 import { GiLaurelCrown } from "react-icons/gi";
 import { about, images, journey, aboutStats, values, recognitions } from "../data/content";
 import "./About.css";
 import indhu from "../assets/ima1/sub/35.JPG";
 import mani from "../assets/ima1/sub/16.JPG";
 import muviaLogo from "../assets/ima1/sub/muvia.jpg";
-
+import bookImg from "../assets/pic/book.png";
 
 const ICONS = {
   pen: PiPenNibBold,
@@ -37,6 +40,19 @@ const ICONS = {
   fingerprint: PiFingerprintBold,
   heart: PiHeartBold,
   target: PiTargetBold,
+};
+
+const hobbies = {
+  eyebrow: "Hobbies & Interests",
+  title: "Naan Virumbi Paditha Puthagangal",
+  subtitle: "Books I love returning to",
+  books: [
+    "Puranangal",
+    "Sri Math Bhagavatham",
+    "Yoga Vasistam (Yoga Vasista)",
+    "Tamil Vedham",
+    "Maranathirku Pin Manithanin Nilai — Maraimalai Adigal",
+  ],
 };
 
 function Icon({ name, ...rest }) {
@@ -323,6 +339,39 @@ export default function About() {
               ))}
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* HOBBIES & INTERESTS */}
+      <section className="hobbies">
+        <div className="container hobbies__inner">
+          <Reveal as="div" className="hobbies__header">
+            <span className="eyebrow">{hobbies.eyebrow}</span>
+            <h2>{hobbies.title}</h2>
+            <p className="hobbies__subtitle">{hobbies.subtitle}</p>
+          </Reveal>
+
+          <div className="hobbies__grid">
+            <div className="hobbies__list">
+              {hobbies.books.map((book, i) => (
+                <Reveal
+                  as="div"
+                  className="hobbies__item"
+                  key={book}
+                  delay={i * STEP}
+                >
+                  <span className="hobbies__icon">
+                    <PiBookOpenTextBold />
+                  </span>
+                  <p>{book}</p>
+                </Reveal>
+              ))}
+            </div>
+
+            <Reveal as="div" className="hobbies__media" delay={STEP}>
+              <img src={bookImg} alt="Books that shaped my thinking" />
+            </Reveal>
+          </div>
         </div>
       </section>
 

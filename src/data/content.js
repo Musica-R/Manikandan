@@ -28,6 +28,11 @@ import new12 from "../assets/images/2.jpeg"
 import new13 from "../assets/images/3.jpeg"
 import new14 from "../assets/images/profile1.jpeg"
 
+import new15 from "../assets/images/new1.jpeg"
+import new16 from "../assets/images/neww.jpeg"
+import new17 from "../assets/ima1/sub/29.JPG"
+import new18 from "../assets/images/new3.jpeg"
+
 
 import beyo from "../assets/pic/2.jpg"
 
@@ -341,7 +346,7 @@ export const navLinks = [
   { id: "filmography", label: "Filmography", path: "/filmography" },
   { id: "gallery", label: "Gallery", path: "/gallery" },
   // { id: "awards", label: "Awards", path: "/awards" },
-   { id: "lyrics", label: "Lyrics", path: "/lyrics" },
+  { id: "lyrics", label: "Lyrics", path: "/lyrics" },
   { id: "contact", label: "Contact", path: "/contact" },
 ];
 
@@ -403,6 +408,11 @@ export const images = {
   new12: new12,
   new13: new13,
   new14: new14,
+
+  new15: new15,
+  new16: new16,
+  new17: new17,
+  new18: new18,
 };
 
 export const galleryImages = [
@@ -410,10 +420,19 @@ export const galleryImages = [
   { src: images.new9, alt: "Behind the scenes" },
   { src: images.new10, alt: "Camera setup" },
   { src: images.new1, alt: "Manikandan, portrait" },
+
+  { src: images.new15, alt: "Editing suite" },
+  { src: images.new16, alt: "Editing suite" },
+  { src: images.new17, alt: "Screening room" },
+
   { src: images.new2, alt: "On set, directing a scene" },
   { src: images.new3, alt: "Clapperboard, ready for a take" },
   { src: images.new4, alt: "Film reel" },
   { src: images.new7, alt: "Screening room" },
+
+  { src: images.new18, alt: "Behind the scenes" },
+
+
   { src: images.new8, alt: "Editing suite" },
   { src: images.new12, alt: "Editing suite" },
   { src: images.new11, alt: "Screening room" },
