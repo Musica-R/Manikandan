@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import { FaArrowRight, FaPlay } from "react-icons/fa";
 import { profile, stats, images } from "../../data/content";
 import "./Hero.css";
+import imagedir from "../../assets/images/dir1.png";
 
 export default function Hero() {
   return (
@@ -41,7 +42,7 @@ export default function Hero() {
 
         <div className="hero__portrait">
           <div className="hero__portrait-frame">
-            <img src={images.portrait} alt="Portrait of Manikandan" />
+            <img src={imagedir} alt="Portrait of Manikandan" />
           </div>
           <span className="hero__portrait-ring" aria-hidden="true" />
         </div>

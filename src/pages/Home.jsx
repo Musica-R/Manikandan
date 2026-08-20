@@ -13,6 +13,7 @@ import "./Home.css";
 import trophyMedal from "../assets/images/aw2.png";
 import trophyStar from "../assets/images/aw1.png";
 import medalImg from "../assets/ima1/sub/medal1.png";
+import Showreel from "../components/Showreel/Showreel";
 
 const awards = [
   {
@@ -162,6 +163,7 @@ export default function Home() {
 
       <ActingCredits />
       <Quote />
+      <Showreel />
       <Gallery />
       <GetInTouch />
     </>

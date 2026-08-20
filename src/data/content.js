@@ -1,6 +1,6 @@
 
 import pro1 from "../assets/ima1/sub/1.JPG"
-import about1 from "../assets/ima1/sub/2.JPG"
+import about1 from "../assets/images/dirc3.png"
 import about2 from "../assets/ima1/sub/3.JPG"
 import about3 from "../assets/ima1/sub/4.JPG"
 import ab1 from "../assets/ima1/sub/5.JPG"
@@ -15,12 +15,12 @@ import ab9 from "../assets/ima1/sub/23.JPG"
 
 import new1 from "../assets/ima1/sub/act2.jpeg"
 import new2 from "../assets/ima1/sub/2.JPG"
-import new3 from "../assets/ima1/sub/3.JPG"
-import new4 from "../assets/ima1/sub/11.JPG"
+import new3 from "../assets/images/ch1.png"
+import new4 from "../assets/images/ch2.png"
 import new5 from "../assets/ima1/sub/18.JPG"
 import new6 from "../assets/ima1/sub/19.JPG"
-import new7 from "../assets/ima1/sub/31.JPG"
-import new8 from "../assets/ima1/sub/35.JPG"
+import new7 from "../assets/images/ch3.png"
+import new8 from "../assets/images/pic7.jpeg"
 import new9 from "../assets/ima1/sub/ab.jpeg"
 import new10 from "../assets/ima1/sub/act1.jpeg"
 import new11 from "../assets/images/1.jpeg"
@@ -417,22 +417,15 @@ export const images = {
 
 export const galleryImages = [
   { src: images.new14, alt: "Camera setup" },
-  { src: images.new9, alt: "Behind the scenes" },
   { src: images.new10, alt: "Camera setup" },
   { src: images.new1, alt: "Manikandan, portrait" },
-
-  { src: images.new15, alt: "Editing suite" },
-  { src: images.new16, alt: "Editing suite" },
   { src: images.new17, alt: "Screening room" },
 
-  { src: images.new2, alt: "On set, directing a scene" },
   { src: images.new3, alt: "Clapperboard, ready for a take" },
   { src: images.new4, alt: "Film reel" },
   { src: images.new7, alt: "Screening room" },
-
   { src: images.new18, alt: "Behind the scenes" },
-
-
+  
   { src: images.new8, alt: "Editing suite" },
   { src: images.new12, alt: "Editing suite" },
   { src: images.new11, alt: "Screening room" },

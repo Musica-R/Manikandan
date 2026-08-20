@@ -60,6 +60,83 @@
   display: block;
 }
 
+/* ---- Hobbies & Interests panel ---- */
+
+.quote-section__hobbies {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: var(--bg-cream-soft);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 2.75rem 3rem;
+}
+
+.quote-section__eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-teal);
+  margin: 0 0 0.6rem;
+}
+
+.quote-section__hobbiesTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2vw, 1.7rem);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--ink);
+  margin: 0 0 0.6rem;
+}
+
+.quote-section__hobbiesSub {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.quote-section__books {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.quote-section__book {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 0.9rem;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.quote-section__book:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.quote-section__bookIndex {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-teal-bright);
+  min-width: 1.6rem;
+}
+
+.quote-section__bookName {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--ink);
+  line-height: 1.4;
+}
+
 @media (max-width: 900px) {
   .quote-section {
     padding: 2.5rem 0;
@@ -97,6 +174,12 @@
     aspect-ratio: 16 / 10;
     min-height: unset;
   }
+
+  .quote-section__hobbies {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 2rem 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -110,5 +193,9 @@
 
   .quote-section__media {
     aspect-ratio: 4 / 3;
+  }
+
+  .quote-section__hobbies {
+    padding: 1.75rem 1.25rem;
   }
 }

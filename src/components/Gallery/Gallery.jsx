@@ -1,16 +1,16 @@
 import React from "react";
 import "./Gallery.css";
-import pro1 from "../../assets/ima1/sub/1.JPG";
+import pro1 from "../../assets/images/new1.jpeg";
 import about1 from "../../assets/ima1/sub/2.JPG";
-import about2 from "../../assets/ima1/sub/3.JPG";
-import ab1 from "../../assets/ima1/sub/11.JPG";
+import about2 from "../../assets/images/neww.jpeg";
+import ab1 from "../../assets/images/dirc2.png";
 import ab2 from "../../assets/ima1/sub/ab.jpeg";
 import ab4 from "../../assets/ima1/sub/31.JPG";
 import ab6 from "../../assets/ima1/sub/10.JPG";
-import ab8 from "../../assets/ima1/sub/35.JPG";
+import ab8 from "../../assets/images/pic5.jpeg";
 
 
-const images = [ pro1, about1, about2, ab1, ab2, ab4, ab6, ab8 ];
+const images = [ pro1,  about2, ab8 ,  ab1, about1, ab2, ab4, ab6];
 
 function chunk(arr, size) {
   const out = [];
