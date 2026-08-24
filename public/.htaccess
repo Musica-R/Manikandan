@@ -1,0 +1,13 @@
+RewriteEngine On
+Options -MultiViews
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://pudusserysreekurumbatemple.in%{REQUEST_URI} [L,R=301]
+
+# React Routing Fix
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.html [L]
