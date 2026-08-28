@@ -23,9 +23,9 @@ export default function Hero() {
               View Filmography <FaArrowRight size={13} />
             </NavLink>
             <NavLink to="/gallery" className="hero__cta hero__cta--outline">
-              <span className="hero__play">
+              {/* <span className="hero__play">
                 <FaPlay size={10} />
-              </span>
+              </span> */}
               Watch Showreel
             </NavLink>
           </div>

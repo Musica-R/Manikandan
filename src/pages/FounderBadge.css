@@ -14,12 +14,7 @@
   padding: 1rem 1.1rem;
   min-width: 90px;
 
-  background: linear-gradient(
-    180deg,
-    var(--chrome-1) 0%,
-    var(--chrome-2) 55%,
-    var(--chrome-3) 100%
-  );
+  background: linear-gradient(180deg, rgba(212, 175, 90, 0.25), rgba(212, 175, 90, 0.05));
   border: 1px solid var(--line);
   border-radius: 10px 0px 0px 10px;
   box-shadow: var(--shadow-chrome);

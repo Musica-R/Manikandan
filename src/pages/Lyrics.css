@@ -146,8 +146,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--bg-teal-deep);
-    background: var(--bg-cream);
+    color: var(--chrome);
+    background: var(--accent-teal);
 }
 
 .muviaCta__text {
@@ -161,7 +161,7 @@
     font-family: var(--font-display);
     font-size: 1.35rem;
     font-weight: 700;
-    color: var(--bg-cream);
+    color: var(--chrome);
 }
 
 .muviaCta__desc {

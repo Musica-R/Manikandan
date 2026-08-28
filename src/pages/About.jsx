@@ -277,7 +277,7 @@ export default function About() {
                   <Icon name={s.icon} />
                 </span>
                 <div>
-                  <strong style={{ color: "black" }}>{s.value}</strong>
+                  <strong>{s.value}</strong>
                   <p>{s.label}</p>
                 </div>
               </Reveal>

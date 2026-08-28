@@ -296,7 +296,7 @@
 }
 
 .muvia__about {
-  background: var(--chrome-1);
+  /* background: var(--chrome-1); */
   border: 1px solid var(--line);
   border-radius: var(--radius-lg);
   padding: 1.8rem 2rem;
@@ -357,7 +357,7 @@
   font-family: var(--font-display);
   font-size: 1.15rem;
   color: var(--ink);
-  background: var(--chrome-1);
+  background: black;
   border: 1px solid var(--line);
   padding: 0.7rem 1.3rem;
   border-radius: 50px;
@@ -612,7 +612,7 @@
 }
 
 .split__card--light {
-  background: var(--chrome-1);
+  /* background: var(--chrome-1); */
   box-shadow: var(--shadow-soft);
 }
 
@@ -671,7 +671,7 @@
   grid-template-columns: 0.8fr 1.2fr;
   gap: 0;
   align-items: stretch;
-  background: var(--chrome-1);
+  /* background: var(--chrome-1); */
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
@@ -846,7 +846,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: var(--chrome-1);
+  /* background: var(--chrome-1); */
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   padding: 1.1rem 1.4rem;

@@ -10,7 +10,7 @@
   content: "";
   position: absolute;
   inset: -20px; /* extend beyond edges so the blur doesn't reveal sharp borders */
-  background: url("../../assets/pic/bg.png") center center / cover no-repeat;
+  background: url("../../assets/images/BG.png") center center / cover no-repeat;
   filter: blur(1px);
   transform: scale(1.05); /* avoid edge artifacts from the blur */
   z-index: -1;
@@ -41,7 +41,7 @@
 .flow-card {
   display: flex;
   flex-direction: column;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+  background: linear-gradient(180deg, rgba(212, 175, 90, 0.25), rgba(212, 175, 90, 0.05));
   border: 1px solid rgba(255, 255, 255, 0.55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -122,7 +122,7 @@
   border: 1px solid var(--line, #e2e2e2);
   border-radius: 999px;
   color: var(--ink, #222);
-  background: rgba(255, 255, 255, 0.5);
+  /* background: rgba(255, 255, 255, 0.5); */
 }
 
 .flow-card__cta {

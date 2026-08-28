@@ -1,15 +1,15 @@
 /* ---------- Footer-local palette (independent of root theme) ---------- */
 .footer {
-  --f-bg: #0a2624;
-  --f-bg-glow: #123f3c;
-  --f-panel: #071e1c;
-  --f-text: #f5f2ea;
-  --f-text-muted: rgba(245, 242, 234, 0.68);
-  --f-text-faint: rgba(245, 242, 234, 0.42);
-  --f-accent: rgba(245, 242, 234, 0.92);
-  --f-line: rgba(255, 255, 255, 0.09);
-  --f-line-strong: rgba(255, 255, 255, 0.16);
-  --f-glass: rgba(255, 255, 255, 0.045);
+  --f-bg: #0a0a08;
+  --f-bg-glow: #1c1710;
+  --f-panel: #050503;
+  --f-text: #f5f0e4;
+  --f-text-muted: rgba(245, 240, 228, 0.68);
+  --f-text-faint: rgba(245, 240, 228, 0.42);
+  --f-accent: rgba(212, 175, 90, 0.92);
+  --f-line: rgba(212, 175, 90, 0.14);
+  --f-line-strong: rgba(212, 175, 90, 0.24);
+  --f-glass: rgba(212, 175, 90, 0.045);
 
   /* chrome/silver accents used by the enhancements below */
   --f-chrome: linear-gradient(
@@ -30,7 +30,7 @@
   overflow: hidden;
   background:
     radial-gradient(90% 120% at 88% -10%, var(--f-bg-glow) 0%, transparent 55%),
-    linear-gradient(160deg, #0d2f2c 0%, var(--f-bg) 45%, #071e1c 100%);
+    linear-gradient(160deg, #171208 0%, var(--f-bg) 45%, #050503 100%);
   color: var(--f-text);
   border-top: 1px solid var(--f-line);
   padding-top: 3.5rem;
@@ -325,8 +325,9 @@
   display: flex;
   align-items: center;
   border-top: 1px solid var(--f-line);
-  padding: 2rem 0;
+  padding: 2rem !important;
   gap: 2rem;
+  margin-top: 20px !important;
 }
 
 .footer__feature {

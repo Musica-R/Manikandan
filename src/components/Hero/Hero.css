@@ -55,7 +55,7 @@
 }
 
 .hero__cta--solid {
-  color: var(--bg-cream);
+  /* color: var(--bg-cream); */
   background: linear-gradient(160deg, var(--bg-teal-mid) 0%, var(--bg-teal-deep) 100%);
   box-shadow: 0 14px 28px rgba(10, 38, 36, 0.28);
 }
@@ -66,7 +66,7 @@
 }
 
 .hero__cta--outline {
-  color: var(--ink);
+  color: black;
   border: 1px solid var(--line);
   background: linear-gradient(180deg, var(--chrome-1), var(--chrome-2));
 }
@@ -100,7 +100,7 @@
 .hero__stat dt {
   font-family: var(--font-display);
   font-size: 1.8rem;
-  color: var(--bg-teal-deep);
+  /* color: var(--bg-teal-deep); */
 }
 
 .hero__stat dd {

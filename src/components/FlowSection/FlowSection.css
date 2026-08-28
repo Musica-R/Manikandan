@@ -29,7 +29,7 @@
 }
 
 .flow__card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.35));
+  background: linear-gradient(180deg, rgba(212, 175, 90, 0.25), rgba(212, 175, 90, 0.05));
   border: 1px solid rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   border-radius: var(--radius-md);

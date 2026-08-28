@@ -80,7 +80,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--ink);
+  /* color: var(--ink); */
   background: linear-gradient(180deg, var(--chrome-1), var(--chrome-2));
   box-shadow: var(--shadow-chrome);
   transition: transform 0.25s ease;

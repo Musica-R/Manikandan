@@ -82,7 +82,7 @@
   align-items: center;
   gap: 0.9rem;
   padding: 1rem 1.1rem;
-  background: rgba(255, 255, 255, 0.6);
+  background: linear-gradient(180deg, rgba(212, 175, 90, 0.25), rgba(212, 175, 90, 0.05));
   border: 1px solid var(--line);
   border-radius: var(--radius-md, 14px);
   text-decoration: none;
@@ -126,7 +126,7 @@
 }
 
 .contact__form {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.45));
+  background: linear-gradient(180deg, rgba(212, 175, 90, 0.25), rgba(212, 175, 90, 0.05));
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-lg);
   padding: 2.2rem;
@@ -156,7 +156,7 @@
   padding: 0.85rem 1rem;
   font-family: var(--font-body);
   font-size: 0.92rem;
-  background: #fff;
+  background: transparent;
   color: var(--ink);
   resize: vertical;
 }
@@ -169,7 +169,7 @@
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.03em;
-  color: var(--bg-cream);
+  color: var(--chrome);
   background: linear-gradient(160deg, var(--bg-teal-mid) 0%, var(--bg-teal-deep) 100%);
   box-shadow: 0 14px 28px rgba(10, 38, 36, 0.24);
   cursor: pointer;

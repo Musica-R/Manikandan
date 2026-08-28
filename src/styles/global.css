@@ -1,34 +1,34 @@
 
 :root {
-  --bg-cream: #faf8f2;
-  --bg-cream-soft: #f4f1e9;
-  --bg-teal: #e7f4f1;
-  --bg-teal-deep: #0a2624;
-  --bg-teal-mid: #123f3c;
+  --bg-cream: #0a0a0a;
+  --bg-cream-soft: #131311;
+  --bg-teal: #1a1712;
+  --bg-teal-deep: #000000;
+  --bg-teal-mid: #1c1a15;
 
-  --ink: #0e211e;
-  --ink-soft: rgba(14, 33, 30, 0.66);
-  --ink-faint: rgba(14, 33, 30, 0.42);
+  --ink: #f2ede1;
+  --ink-soft: rgba(242, 237, 225, 0.7);
+  --ink-faint: rgba(242, 237, 225, 0.45);
 
   --chrome-1: #ffffff;
-  --chrome-2: #eceef1;
-  --chrome-3: #cfd3d8;
-  --chrome-4: #a9adb4;
-  --chrome-5: #7d8188;
+  --chrome-2: #e4e6e9;
+  --chrome-3: #b8bcc2;
+  --chrome-4: #888c92;
+  --chrome-5: #5a5d62;
 
-  --line: rgba(14, 33, 30, 0.12);
-  --line-soft: rgba(14, 33, 30, 0.07);
+  --line: rgba(212, 175, 90, 0.18);
+  --line-soft: rgba(212, 175, 90, 0.08);
 
-  --accent-teal: #14746b;
-  --accent-teal-bright: #1c9c8f;
+  --accent-teal: #d4af5a;
+  --accent-teal-bright: #f2cd7c;
 
   --radius-sm: 6px;
   --radius-md: 14px;
   --radius-lg: 28px;
 
-  --shadow-soft: 0 20px 60px rgba(10, 38, 36, 0.08);
-  --shadow-chrome: 0 1px 0 rgba(255, 255, 255, 0.6) inset,
-    0 -1px 0 rgba(0, 0, 0, 0.06) inset, 0 12px 30px rgba(10, 38, 36, 0.14);
+  --shadow-soft: 0 20px 60px rgba(0, 0, 0, 0.5);
+  --shadow-chrome: 0 1px 0 rgba(255, 255, 255, 0.15) inset,
+    0 -1px 0 rgba(0, 0, 0, 0.4) inset, 0 12px 30px rgba(0, 0, 0, 0.5);
 
   --font-display: "Fraunces", "Georgia", serif;
   --font-body: "Manrope", "Segoe UI", sans-serif;

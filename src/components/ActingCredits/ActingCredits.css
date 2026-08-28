@@ -78,7 +78,7 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--bg-cream);
-  background: var(--bg-teal-deep);
+  background: var(--accent-teal);
   padding: 0.7rem 1.2rem;
   border-radius: 999px;
   white-space: nowrap;
@@ -87,7 +87,7 @@
 
 .acting-credits__link:hover {
   transform: translateY(-2px);
-  background: var(--bg-teal-mid);
+  background: var(--accent-teal-bright);
 }
 
 .reveal-text {
@@ -151,9 +151,9 @@
   height: var(--phone-h);
   border-radius: 34px;
   padding: 0.55rem;
-  background: linear-gradient(155deg, #1c524d 0%, #0d332f 45%, #071d1a 100%);
-  box-shadow: 0 34px 80px rgba(10, 38, 36, 0.4),
-    0 0 0 1px rgba(255, 255, 255, 0.07) inset,
+  background: linear-gradient(155deg, #2b2210 0%, #16110a 45%, #050402 100%);
+  box-shadow: 0 34px 80px rgba(0, 0, 0, 0.55),
+    0 0 0 1px rgba(212, 175, 90, 0.1) inset,
     0 2px 0 rgba(255, 255, 255, 0.06) inset;
   transition: width 0.5s cubic-bezier(0.22, 1, 0.36, 1),
     height 0.5s cubic-bezier(0.22, 1, 0.36, 1),
@@ -191,7 +191,7 @@
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #7fe0d3, #0a2624 70%);
+  background: radial-gradient(circle at 35% 35%, #f2cd7c, #0a0a08 70%);
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.06);
   z-index: 3;
 }
@@ -199,7 +199,7 @@
 .phone-frame__btn {
   position: absolute;
   border-radius: 2px 0 0 2px;
-  background: linear-gradient(180deg, #2a615c, #0a2624);
+  background: linear-gradient(180deg, #b8933f, #0a0a08);
 }
 
 .phone-frame__btn--power {
@@ -234,7 +234,7 @@
   width: 20px;
   height: 3px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.16);
+  background: rgba(212, 175, 90, 0.18);
 }
 
 .phone-frame__port {
@@ -245,7 +245,7 @@
   width: 12px;
   height: 4px;
   border-radius: 2px;
-  background: rgba(255, 255, 255, 0.14);
+  background: rgba(212, 175, 90, 0.16);
   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.25);
 }
 
@@ -255,9 +255,9 @@
   height: 100%;
   border-radius: 27px;
   overflow: hidden;
-  background: #06120f;
-  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-    0 8px 24px rgba(0, 0, 0, 0.35) inset;
+  background: #050403;
+  box-shadow: 0 0 0 1px rgba(212, 175, 90, 0.08) inset,
+    0 8px 24px rgba(0, 0, 0, 0.5) inset;
   transition: border-radius 0.5s ease;
 }
 
@@ -317,9 +317,9 @@
   z-index: 2;
   pointer-events: none;
   background: linear-gradient(0deg,
-      rgba(6, 18, 15, 0.92) 0%,
-      rgba(6, 18, 15, 0.15) 42%,
-      rgba(6, 18, 15, 0) 65%);
+      rgba(0, 0, 0, 0.92) 0%,
+      rgba(0, 0, 0, 0.15) 42%,
+      rgba(0, 0, 0, 0) 65%);
 }
 
 .phone-stage.is-landscape .phone-frame__vignette {
@@ -341,7 +341,7 @@
   cursor: pointer;
   color: var(--bg-teal-deep);
   background: linear-gradient(145deg, var(--chrome-1), var(--chrome-3));
-  box-shadow: var(--shadow-chrome), 0 0 0 8px rgba(250, 248, 242, 0.12);
+  box-shadow: var(--shadow-chrome), 0 0 0 8px rgba(212, 175, 90, 0.14);
   transform: translate(-50%, -50%);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   -webkit-tap-highlight-color: transparent;
@@ -353,7 +353,7 @@
 
 .phone-frame__play:hover {
   transform: translate(-50%, -50%) scale(1.08);
-  box-shadow: var(--shadow-chrome), 0 0 0 12px rgba(250, 248, 242, 0.16);
+  box-shadow: var(--shadow-chrome), 0 0 0 12px rgba(212, 175, 90, 0.2);
 }
 
 .phone-frame__close {
@@ -369,14 +369,14 @@
   border-radius: 50%;
   border: none;
   cursor: pointer;
-  color: var(--bg-cream);
-  background: rgba(10, 38, 36, 0.6);
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px);
   transition: background 0.2s ease;
 }
 
 .phone-frame__close:hover {
-  background: rgba(10, 38, 36, 0.85);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .phone-frame__caption {
@@ -395,14 +395,14 @@
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 500;
-  color: var(--bg-cream);
+  color: var(--ink);
 }
 
 .phone-frame__caption-genre {
   font-size: 0.62rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(250, 248, 242, 0.65);
+  color: rgba(242, 237, 225, 0.65);
   margin-bottom: 0.2rem;
 }
 
@@ -414,7 +414,7 @@
   font-weight: 700;
   letter-spacing: 0.02em;
   color: var(--bg-teal-deep);
-  background: var(--bg-cream);
+  background: var(--accent-teal);
   border: none;
   padding: 0.4rem 0.75rem;
   border-radius: 999px;
@@ -425,6 +425,7 @@
 
 .phone-frame__watch-btn:hover {
   transform: translateY(-1px);
+  background: var(--accent-teal-bright);
 }
 
 /* ---------- TV stand ---------- */
@@ -439,7 +440,7 @@
 .tv-stand__neck {
   width: 16px;
   height: 16px;
-  background: linear-gradient(180deg, #2a615c, #0a2624);
+  background: linear-gradient(180deg, #b8933f, #0a0a08);
   clip-path: polygon(30% 0, 70% 0, 100% 100%, 0% 100%);
 }
 
@@ -448,8 +449,8 @@
   height: 8px;
   margin-top: -1px;
   border-radius: 5px;
-  background: linear-gradient(180deg, #2a615c, #0a2624);
-  box-shadow: 0 6px 14px rgba(10, 38, 36, 0.35);
+  background: linear-gradient(180deg, #b8933f, #0a0a08);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
 }
 
 /* ---------- Stat bar under the phone ---------- */
@@ -471,7 +472,7 @@
   align-items: center;
   gap: 0.3rem;
   padding: 0.9rem 0.4rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  border-right: 1px solid rgba(212, 175, 90, 0.14);
   text-align: center;
   min-width: 0;
 }
@@ -481,7 +482,7 @@
 }
 
 .acting-credits__stat-icon {
-  color: var(--accent-teal-bright, #7fe0d3);
+  color: var(--accent-teal-bright, #f2cd7c);
   font-size: 0.9rem;
 }
 
@@ -489,14 +490,14 @@
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 0.95rem;
-  color: var(--bg-cream);
+  color: var(--ink);
 }
 
 .acting-credits__stat-label {
   font-size: 0.62rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: rgba(250, 248, 242, 0.65);
+  color: rgba(242, 237, 225, 0.65);
 }
 
 /* ---------- Right: tabs + list ---------- */
@@ -516,7 +517,7 @@
   flex-wrap: wrap;
   gap: 0.6rem;
   padding: 0.6rem;
-  background: rgba(250, 248, 242, 0.75);
+  background: rgba(10, 10, 8, 0.75);
   backdrop-filter: blur(10px);
   box-shadow: var(--shadow-soft);
   width: fit-content;
@@ -548,9 +549,9 @@
 }
 
 .credit-tabs__btn.is-active {
-  color: var(--bg-cream);
-  background: var(--bg-teal-deep);
-  box-shadow: 0 8px 20px rgba(10, 38, 36, 0.28);
+  color: var(--bg-teal-deep);
+  background: var(--accent-teal);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
 /* ---------- List rows ---------- */
@@ -569,7 +570,7 @@
   padding: 1rem 1.2rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
-  background: rgba(250, 248, 242, 0.5);
+  background: black;
   cursor: pointer;
   opacity: 0;
   transform: translateY(22px);
@@ -587,8 +588,11 @@
   border-color: var(--accent-teal);
 }
 
+/* FIX: previously used var(--bg-cream), which is now near-black in the
+   dark theme and gave no contrast against the row's own black background.
+   Swapped to a subtle gold-tinted panel so the active row actually stands out. */
 .credit-row.is-active {
-  background: var(--bg-cream);
+  background: linear-gradient(160deg, rgba(212, 175, 90, 0.14), rgba(212, 175, 90, 0.04));
   border-color: var(--accent-teal);
   box-shadow: var(--shadow-soft);
 }
@@ -651,7 +655,7 @@
 }
 
 .credit-row.is-active .credit-row__title {
-  color: var(--accent-teal);
+  color: var(--accent-teal-bright);
 }
 
 .credit-row__tag {
@@ -706,9 +710,9 @@
 }
 
 .credit-row.is-active .credit-row__watch {
-  color: var(--bg-cream);
-  background: var(--bg-teal-deep);
-  border-color: var(--bg-teal-deep);
+  color: var(--bg-teal-deep);
+  background: var(--accent-teal-bright);
+  border-color: var(--accent-teal-bright);
 }
 
 /* ---------- Bottom note ---------- */
@@ -762,11 +766,8 @@
     --phone-w: 200px;
     --phone-h: 420px;
     --tv-w: 360px;
-    /* was 320px */
     --tv-h: 202px;
-    /* was 180px */
     width: 360px;
-    /* was 320px, must match --tv-w */
     height: 420px;
     margin: 0 auto;
   }
@@ -826,11 +827,8 @@
 
   .phone-stage {
     --tv-w: 320px;
-    /* was 280px */
     --tv-h: 240px;
-    /* was 157px */
     width: 320px;
-    /* was 280px */
   }
 
   .acting-credits__stats {
@@ -881,7 +879,7 @@
     font-size: 0.76rem;
     padding: 0.6rem 1rem;
   }
- 
+
   .credit-row {
     flex-direction: column;
     gap: 10px;
@@ -892,11 +890,8 @@
     --phone-w: 170px;
     --phone-h: 360px;
     --tv-w: 320px;
-    /* was 240px */
     --tv-h: 257px;
-    /* was 135px */
     width: 280px;
-    /* was 240px */
     height: 360px;
   }
 
