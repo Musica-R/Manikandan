@@ -26,7 +26,8 @@ import "./About.css";
 import indhu from "../assets/ima1/sub/35.JPG";
 import mani from "../assets/ima1/sub/16.JPG";
 import muviaLogo from "../assets/ima1/sub/muvia.jpg";
-import bookImg from "../assets/pic/book.png";
+// import bookImg from "../assets/pic/book.png";
+import bookVideo from "../assets/pic/Man.mp4";
 
 const ICONS = {
   pen: PiPenNibBold,
@@ -100,6 +101,31 @@ function Reveal({ children, delay = 0, className = "", as: Tag = "div" }) {
   );
 }
 
+function useAutoPauseVideo(threshold = 0.4) {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const node = videoRef.current;
+    if (!node) return undefined;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          node.play().catch(() => { }); // catch autoplay-block errors
+        } else {
+          node.pause();
+        }
+      },
+      { threshold }
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [threshold]);
+
+  return videoRef;
+}
+
 /* ---------- Content specific to this page ---------- */
 
 const workExperience = {
@@ -134,6 +160,9 @@ const muvia = {
 const STEP = 130; // ms between each staggered item
 
 export default function About() {
+
+  const bookVideoRef = useAutoPauseVideo();
+
   return (
     <>
       {/* HERO */}
@@ -369,7 +398,15 @@ export default function About() {
             </div>
 
             <Reveal as="div" className="hobbies__media" delay={STEP}>
-              <img src={bookImg} alt="Books that shaped my thinking" />
+              <video
+                ref={bookVideoRef}
+                src={bookVideo}
+                muted
+                loop
+                playsInline
+                preload="metadata"
+                className="hobbies__video"
+              />
             </Reveal>
           </div>
         </div>
