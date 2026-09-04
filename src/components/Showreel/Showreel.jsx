@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./Showreel.css";
-import clip1 from "../../assets/images/new.mp4";
+import clip1 from "../../assets/pic/Bio.mov";
 import clip2 from "../../assets/images/new1.mp4";
 
 const YOUTUBE_ID = "0MTT3a48aRE";
@@ -9,6 +9,7 @@ const YOUTUBE_ID = "0MTT3a48aRE";
 let activePlayerStop = null;
 
 // Shared helper: fires when element goes out of view
+
 function useOffscreenPause(elRef, onLeave, threshold = 0.4) {
   useEffect(() => {
     const el = elRef.current;
